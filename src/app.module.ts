@@ -7,6 +7,8 @@ import { TenantInfoOrm } from './orms/tenant-info.orm';
 import { OrganisationUnitOrm } from './orms/organisation-unit.orm';
 import { OrganisationUnitTypeOrm } from './orms/organisation-unit-type.orm';
 import { AppService } from './app.service';
+import { LocationOfOrgUnitOrm } from './orms/location_of_ou.orm';
+import { LocationOrm } from './orms/location.orm';
 
 @Module({
   imports: [
@@ -24,6 +26,8 @@ import { AppService } from './app.service';
             TenantInfoOrm,
             OrganisationUnitOrm,
             OrganisationUnitTypeOrm,
+            LocationOfOrgUnitOrm,
+            LocationOrm,
           ],
           synchronize: false,
         };
@@ -37,6 +41,8 @@ import { AppService } from './app.service';
       TenantInfoOrm,
       OrganisationUnitOrm,
       OrganisationUnitTypeOrm,
+      LocationOfOrgUnitOrm,
+      LocationOrm,
     ]),
   ],
 

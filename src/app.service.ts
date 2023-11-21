@@ -6,6 +6,8 @@ import { TenantInfoOrm } from './orms/tenant-info.orm';
 import { OrganisationUnitOrm } from './orms/organisation-unit.orm';
 import { OrganisationUnitTypeOrm } from './orms/organisation-unit-type.orm';
 import { findOperatorParser, getListPagingByEntity } from './utils/common';
+import { LocationOfOrgUnitOrm } from './orms/location_of_ou.orm';
+import { LocationOrm } from './orms/location.orm';
 
 @Injectable()
 export class AppService {
@@ -16,11 +18,17 @@ export class AppService {
     private organisationUnitRepo: Repository<OrganisationUnitOrm>,
     @InjectRepository(OrganisationUnitTypeOrm)
     private organisationUnitTypeRepo: Repository<OrganisationUnitTypeOrm>,
+    @InjectRepository(LocationOfOrgUnitOrm)
+    private LocationOfOrgUnitOrmRepo: Repository<LocationOfOrgUnitOrm>,
+    @InjectRepository(LocationOrm)
+    private LocationOrmRepo: Repository<LocationOrm>,
   ) {}
   private AM_ORGANISATION = {
     TENTANT_INFO: this.tenantInfoRepo,
     ORGANISATION_UNIT: this.organisationUnitRepo,
     ORGANISATION_UNIT_TYPE: this.organisationUnitTypeRepo,
+    LOCATION: this.LocationOrmRepo,
+    LOCATION_OF_ORG_UNIT: this.LocationOfOrgUnitOrmRepo,
   };
 
   async getOne(payload?: any, entity?: string) {

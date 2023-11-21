@@ -4,14 +4,14 @@ import { AbstractOrm } from './abstract.orm';
 @Entity('organisation_unit_type')
 export class OrganisationUnitTypeOrm extends AbstractOrm {
   @Column({
-    name: 'organisation_unit_type_name',
+    name: 'name',
     nullable: false,
   })
-  otpCode: string;
+  name: string;
 
   @Column({
     name: 'tenant_id',
     nullable: false,
   })
-  authInfoId: number;
+  tenant_id: number;
 }

@@ -4,44 +4,44 @@ import { AbstractOrm } from './abstract.orm';
 @Entity('tenant')
 export class TenantInfoOrm extends AbstractOrm {
   @Column({
-    name: 'tenant_name',
+    name: 'name',
     nullable: false,
   })
-  tenant_name: string;
+  name: string;
 
   @Column({
-    name: 'tenant_location',
+    name: 'location',
     nullable: true,
   })
-  tenant_location: string;
+  location: string;
 
   @Column({
-    name: 'tenant_province',
+    name: 'province',
     nullable: true,
   })
-  tenant_province: string;
+  province: string;
   @Column({
-    name: 'tenant_city',
-    nullable: false,
+    name: 'city',
+    nullable: true,
   })
-  tenant_city: string;
+  city: string;
 
   @Column({
-    name: 'tenant_country',
+    name: 'country',
     nullable: true,
   })
-  tenant_country: string;
+  country: string;
 
   @Column({
-    name: 'tenant_phone',
+    name: 'phone',
     nullable: true,
   })
-  tenant_phone: string;
+  phone: string;
   @Column({
-    name: 'tenant_fax',
+    name: 'fax',
     nullable: true,
   })
-  tenant_fax: string;
+  fax: string;
 
   @Column({
     name: 'business_registration_code',
@@ -49,10 +49,10 @@ export class TenantInfoOrm extends AbstractOrm {
   })
   business_registration_code: string;
   @Column({
-    name: 'tenant_email',
+    name: 'email',
     nullable: false,
   })
-  tenant_email: string;
+  email: string;
 
   @Column({
     name: 'date_of_establishment',
@@ -61,13 +61,13 @@ export class TenantInfoOrm extends AbstractOrm {
   date_of_establishment: string;
 
   @Column({
-    name: 'tenant_logo',
+    name: 'logo',
     nullable: true,
   })
-  tenant_logo: string;
+  logo: string;
   @Column({
-    name: 'tenant_state',
+    name: 'state',
     nullable: true,
   })
-  tenant_state: string;
+  state: string;
 }

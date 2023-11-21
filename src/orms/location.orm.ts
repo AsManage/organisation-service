@@ -1,8 +1,8 @@
 import { Entity, Column } from 'typeorm';
 import { AbstractOrm } from './abstract.orm';
 
-@Entity('organisation_unit')
-export class OrganisationUnitOrm extends AbstractOrm {
+@Entity('location')
+export class LocationOrm extends AbstractOrm {
   @Column({
     name: 'name',
     nullable: false,
@@ -33,26 +33,14 @@ export class OrganisationUnitOrm extends AbstractOrm {
   parent_id: number;
 
   @Column({
-    name: 'area_of_operation',
-    nullable: true,
-  })
-  area_of_operation: string;
-
-  @Column({
-    name: 'org_leaders',
-    nullable: true,
-  })
-  org_leaders: string;
-
-  @Column({
     name: 'business_function_description',
     nullable: true,
   })
   business_function_description: string;
 
   @Column({
-    name: 'organisation_unit_type_id',
-    nullable: false,
+    name: 'tenant_id',
+    nullable: true,
   })
-  organisation_unit_type_id: number;
+  tenant_id: number;
 }
