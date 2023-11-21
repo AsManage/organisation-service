@@ -19,16 +19,16 @@ export class AppService {
     @InjectRepository(OrganisationUnitTypeOrm)
     private organisationUnitTypeRepo: Repository<OrganisationUnitTypeOrm>,
     @InjectRepository(LocationOfOrgUnitOrm)
-    private LocationOfOrgUnitOrmRepo: Repository<LocationOfOrgUnitOrm>,
+    private locationOfOrgUnitOrmRepo: Repository<LocationOfOrgUnitOrm>,
     @InjectRepository(LocationOrm)
-    private LocationOrmRepo: Repository<LocationOrm>,
+    private locationOrmRepo: Repository<LocationOrm>,
   ) {}
   private AM_ORGANISATION = {
     TENTANT_INFO: this.tenantInfoRepo,
     ORGANISATION_UNIT: this.organisationUnitRepo,
     ORGANISATION_UNIT_TYPE: this.organisationUnitTypeRepo,
-    LOCATION: this.LocationOrmRepo,
-    LOCATION_OF_ORG_UNIT: this.LocationOfOrgUnitOrmRepo,
+    LOCATION: this.locationOrmRepo,
+    LOCATION_OF_ORG_UNIT: this.locationOfOrgUnitOrmRepo,
   };
 
   async getOne(payload?: any, entity?: string) {
