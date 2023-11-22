@@ -13,41 +13,41 @@ export class TenantInfoOrm extends AbstractOrm {
     name: 'location',
     nullable: true,
   })
-  location: string;
+  location: string | null;
 
   @Column({
     name: 'province',
     nullable: true,
   })
-  province: string;
+  province: string | null;
   @Column({
     name: 'city',
     nullable: true,
   })
-  city: string;
+  city: string | null;
 
   @Column({
     name: 'country',
     nullable: true,
   })
-  country: string;
+  country: string | null;
 
   @Column({
     name: 'phone',
     nullable: true,
   })
-  phone: string;
+  phone: string | null;
   @Column({
     name: 'fax',
     nullable: true,
   })
-  fax: string;
+  fax: string | null;
 
   @Column({
     name: 'business_registration_code',
     nullable: true,
   })
-  business_registration_code: string;
+  business_registration_code: string | null;
   @Column({
     name: 'email',
     nullable: false,
@@ -58,16 +58,16 @@ export class TenantInfoOrm extends AbstractOrm {
     name: 'date_of_establishment',
     nullable: true,
   })
-  date_of_establishment: string;
+  date_of_establishment: string | null;
 
   @Column({
     name: 'logo',
     nullable: true,
   })
-  logo: string;
+  logo: string | null;
   @Column({
     name: 'state',
     nullable: true,
   })
-  state: string;
+  state: string | null;
 }

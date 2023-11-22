@@ -19,13 +19,13 @@ export class OrganisationUnitOrm extends AbstractOrm {
     name: 'description',
     nullable: true,
   })
-  description: string;
+  description: string | null;
 
   @Column({
     name: 'sort_id',
     nullable: true,
   })
-  sort_id: string;
+  sort_id: string | null;
   @Column({
     name: 'parent_id',
     nullable: false,
@@ -36,19 +36,19 @@ export class OrganisationUnitOrm extends AbstractOrm {
     name: 'area_of_operation',
     nullable: true,
   })
-  area_of_operation: string;
+  area_of_operation: string | null;
 
   @Column({
     name: 'org_leaders',
     nullable: true,
   })
-  org_leaders: string;
+  org_leaders: string | null;
 
   @Column({
     name: 'business_function_description',
     nullable: true,
   })
-  business_function_description: string;
+  business_function_description: string | null;
 
   @Column({
     name: 'organisation_unit_type_id',

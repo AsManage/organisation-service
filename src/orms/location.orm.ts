@@ -19,13 +19,13 @@ export class LocationOrm extends AbstractOrm {
     name: 'description',
     nullable: true,
   })
-  description: string;
+  description: string | null;
 
   @Column({
     name: 'sort_id',
     nullable: true,
   })
-  sort_id: string;
+  sort_id: string | null;
   @Column({
     name: 'parent_id',
     nullable: false,
@@ -36,7 +36,7 @@ export class LocationOrm extends AbstractOrm {
     name: 'business_function_description',
     nullable: true,
   })
-  business_function_description: string;
+  business_function_description: string | null;
 
   @Column({
     name: 'tenant_id',
