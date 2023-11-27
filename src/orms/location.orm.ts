@@ -8,6 +8,11 @@ export class LocationOrm extends AbstractOrm {
     nullable: false,
   })
   name: string;
+  @Column({
+    name: 'code',
+    nullable: false,
+  })
+  code: string;
 
   @Column({
     name: 'state',
@@ -25,22 +30,22 @@ export class LocationOrm extends AbstractOrm {
     name: 'sort_id',
     nullable: true,
   })
-  sort_id: string | null;
+  sortId: string | null;
   @Column({
     name: 'parent_id',
     nullable: false,
   })
-  parent_id: number;
+  parentId: number;
 
   @Column({
     name: 'business_function_description',
     nullable: true,
   })
-  business_function_description: string | null;
+  businessFunctionDescription: string | null;
 
   @Column({
     name: 'tenant_id',
     nullable: true,
   })
-  tenant_id: number;
+  tenantId: number;
 }

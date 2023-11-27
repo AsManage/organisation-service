@@ -24,7 +24,7 @@ export class AppService {
     private locationOrmRepo: Repository<LocationOrm>,
   ) {}
   private AM_ORGANISATION = {
-    TENTANT_INFO: this.tenantInfoRepo,
+    TENANT_INFO: this.tenantInfoRepo,
     ORGANISATION_UNIT: this.organisationUnitRepo,
     ORGANISATION_UNIT_TYPE: this.organisationUnitTypeRepo,
     LOCATION: this.locationOrmRepo,
@@ -34,7 +34,7 @@ export class AppService {
   async getOne(payload?: any, entity?: string) {
     const parsePayload = findOperatorParser(payload);
     const repository = this.AM_ORGANISATION[entity];
-    return await repository.findOne(parsePayload);
+    return await repository.findOne({ where: parsePayload });
   }
 
   async getByIds(payload?: any, entity?: string) {
@@ -89,6 +89,7 @@ export class AppService {
         message: 'BAD_REQUEST',
       };
     }
+    console.log(data);
     return await repository.save({
       ...data,
       createdAt: new Date(),

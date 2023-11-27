@@ -13,5 +13,5 @@ export class OrganisationUnitTypeOrm extends AbstractOrm {
     name: 'tenant_id',
     nullable: false,
   })
-  tenant_id: number;
+  tenantId: number;
 }

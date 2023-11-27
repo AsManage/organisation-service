@@ -1,17 +1,17 @@
 import { Entity, Column } from 'typeorm';
 import { AbstractOrm } from './abstract.orm';
 
-@Entity('location')
+@Entity('location_of_ou')
 export class LocationOfOrgUnitOrm extends AbstractOrm {
   @Column({
     name: 'organisation_unit_id',
     nullable: false,
   })
-  organisation_unit_id: number;
+  organisationUnitId: number;
 
   @Column({
     name: 'location_id',
     nullable: false,
   })
-  location_id: number;
+  locationId: number;
 }

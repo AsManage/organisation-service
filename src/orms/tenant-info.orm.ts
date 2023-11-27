@@ -47,7 +47,7 @@ export class TenantInfoOrm extends AbstractOrm {
     name: 'business_registration_code',
     nullable: true,
   })
-  business_registration_code: string | null;
+  businessRegistrationCode: string | null;
   @Column({
     name: 'email',
     nullable: false,
@@ -58,7 +58,7 @@ export class TenantInfoOrm extends AbstractOrm {
     name: 'date_of_establishment',
     nullable: true,
   })
-  date_of_establishment: string | null;
+  dateOfEstablishment: string | null;
 
   @Column({
     name: 'logo',
