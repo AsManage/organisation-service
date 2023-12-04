@@ -54,6 +54,12 @@ export class AppService {
     return await getListPagingByEntity(payload, repository);
   }
 
+  async delete(payload?: any, entity?: string) {
+    const parsePayload = findOperatorParser(payload);
+    const repository = this.AM_ORGANISATION[entity];
+    return await repository.delete({ where: parsePayload });
+  }
+
   async update(payload?: any, entity?: string) {
     const repository = this.AM_ORGANISATION[entity];
     const { conditions, data, id } = payload;
