@@ -55,10 +55,9 @@ export class AppService {
   }
 
   async delete(payload?: any, entity?: string) {
-    const parsePayload = findOperatorParser(payload);
     const repository = this.AM_ORGANISATION[entity];
-    return await repository.delete({ ...parsePayload });
-  }
+    return await repository.delete({ ...payload });
+  } 
 
   async update(payload?: any, entity?: string) {
     const repository = this.AM_ORGANISATION[entity];
