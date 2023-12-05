@@ -81,7 +81,7 @@ export class AppService {
     const { checkExisted, data } = payload;
     if (isEmpty(checkExisted)) {
       return await repository.save({
-        ...payload,
+        ...data,
         createdAt: new Date(),
         createdBy: payload.id,
       });
