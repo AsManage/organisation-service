@@ -55,4 +55,10 @@ export class OrganisationUnitOrm extends AbstractOrm {
     nullable: false,
   })
   organisationUnitTypeId: number;
+
+  @Column({
+    name: 'tenant_id',
+    nullable: false,
+  })
+  tenantId: number;
 }
